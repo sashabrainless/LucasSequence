@@ -3,6 +3,12 @@ import java.util.Scanner;
 
 /**
  * Головний клас програми, що розташований в Main.java
+ *  <p>Виконує такі функції:
+ *  <ul>
+ *  <li>Запуск програми;</li>
+ *  <li>Викликає функції;</li>
+ *  <li>Викликає інші класи.</li>
+ *  </ul>
  */
 public class Main {
     /**
@@ -19,7 +25,7 @@ public class Main {
             System.out.print("Введіть кількість N чисел в ряду Люка: ");
             int n = scanner.nextInt();
 
-            if (n <= 90) {
+            if (n <= 90 && n >= 1) {
                 LucasSequenceClass lucas = new LucasSequenceClass(n);
                 System.out.println("----------------------------Числа Люка----------------------------");
                 lucas.printNumbers();
@@ -49,8 +55,11 @@ public class Main {
                         break;
                 }
             }
-            else {
+            else if (n > 90) {
                 System.out.println("Максимальне значення N = 90, так як максимальне значення long змінної = 9,223,372,036,854,775,807");
+            }
+            else {
+                System.out.println("Мінімальне значення N = 1");
             }
         } catch (Exception ex) {
             throw new RuntimeException(ex);

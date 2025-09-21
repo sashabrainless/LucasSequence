@@ -2,6 +2,14 @@ package org.lucassequence;
 
 /**
  * Класс ряду Люка, що розташований в LucasSequenceClass.java
+ * <p>Виконує такі функції:
+ *  <ul>
+ *  <li>Ініціалізація ряду Люка;</li>
+ *  <li>Виведення ряду Люка на екран;</li>
+ *  <li>Перевірка відповідності чисел ряду формулі (w^2)-1, де w - певне ціле число;</li>
+ *  <li>Пошук індексу введеного числа;</li>
+ *  <li>Пошук числа за вказаним індексом.</li>
+ *  </ul>
  */
 public class LucasSequenceClass {
     /**
@@ -30,9 +38,11 @@ public class LucasSequenceClass {
     void initNumbers(int count) {
         lucasnumbers = new long [count];
         lucasnumbers[0] = 2;
-        lucasnumbers[1] = 1;
-        for (int i = 2; i < count; i++) {
-            lucasnumbers[i] = lucasnumbers[i-2] + lucasnumbers[i-1];
+        if (count >= 2) {
+            lucasnumbers[1] = 1;
+            for (int i = 2; i < count; i++) {
+                lucasnumbers[i] = lucasnumbers[i-2] + lucasnumbers[i-1];
+            }
         }
     }
 
