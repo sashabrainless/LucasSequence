@@ -29,14 +29,17 @@ public class Main {
                         luke.squaredNumbersPlusOne();
                         break;
                     case 2:
-                        System.out.println("Введіть число: ");
+                        System.out.print("Введіть число: ");
                         int number = scanner.nextInt();
                         luke.reutrnIndex(number);
                         break;
                     case 3:
-                        System.out.println("Введіть індекс: ");
+                        System.out.print("Введіть індекс: ");
                         int index = scanner.nextInt();
                         luke.findByIndex(index);
+                        break;
+                    default:
+                        System.out.print("Такого варіанту немає!");
                         break;
                 }
             }

@@ -48,7 +48,7 @@ public class LucasSequenceClass {
     }
 
     void findByIndex(int index) { //додаткова функція знаходження числа за індексом
-        if (!(index > lucasnumbers.length) && !(index < 0)) {
+        if (!(index >= lucasnumbers.length) && !(index < 0)) {
             System.out.println("luke[" + index + "] = " + lucasnumbers[index]);
         }
         else {
