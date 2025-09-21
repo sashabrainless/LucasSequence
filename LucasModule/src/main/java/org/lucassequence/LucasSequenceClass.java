@@ -20,7 +20,7 @@ public class LucasSequenceClass {
     }
     void printNumbers() { //вивід чисел
         for (int i = 0; i < lucasnumbers.length; i++) {
-            System.out.println("luke[" + i + "] = " + lucasnumbers[i]);
+            System.out.println("lucas[" + i + "] = " + lucasnumbers[i]);
         }
     }
 
@@ -28,7 +28,7 @@ public class LucasSequenceClass {
         for (int i = 0; i < lucasnumbers.length; i++) {
             double w = Math.sqrt(lucasnumbers[i] - 1);
             if (w - Math.floor(w) == 0) {
-                System.out.printf("luke[%d] = %d, w = %.0f%n", i, lucasnumbers[i], w);
+                System.out.printf("lucas[%d] = %d, w = %.0f%n", i, lucasnumbers[i], w);
             }
         }
     }
@@ -37,7 +37,7 @@ public class LucasSequenceClass {
         boolean isfound = false;
         for (int i = 0; i < lucasnumbers.length; i++) {
             if (lucasnumbers[i] == num) {
-                System.out.println("luke = " + lucasnumbers[i] + ", index = " + i);
+                System.out.println("lucas = " + lucasnumbers[i] + ", index = " + i);
                 isfound = true;
                 return;
             }
@@ -49,7 +49,7 @@ public class LucasSequenceClass {
 
     void findByIndex(int index) { //додаткова функція знаходження числа за індексом
         if (!(index >= lucasnumbers.length) && !(index < 0)) {
-            System.out.println("luke[" + index + "] = " + lucasnumbers[index]);
+            System.out.println("lucas[" + index + "] = " + lucasnumbers[index]);
         }
         else {
             System.out.println("Немає числа з таким індексом!");

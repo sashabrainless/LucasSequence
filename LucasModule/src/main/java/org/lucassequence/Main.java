@@ -14,9 +14,9 @@ public class Main {
             int n = scanner.nextInt();
 
             if (n <= 90) {
-                LucasSequenceClass luke = new LucasSequenceClass(n);
+                LucasSequenceClass lucas = new LucasSequenceClass(n);
                 System.out.println("----------------------------Числа Люка----------------------------");
-                luke.printNumbers();
+                lucas.printNumbers();
                 System.out.println("------------------------------------------------------------------");
                 System.out.print("1 - Числа ряду Люка, що є на 1 більшими за квадрат числа w\n" +
                         "2 - Пошук індекса за числом\n" +
@@ -26,17 +26,17 @@ public class Main {
                 System.out.println("------------------------------------------------------------------");
                 switch (var) {
                     case 1:
-                        luke.squaredNumbersPlusOne();
+                        lucas.squaredNumbersPlusOne();
                         break;
                     case 2:
                         System.out.print("Введіть число: ");
                         int number = scanner.nextInt();
-                        luke.reutrnIndex(number);
+                        lucas.reutrnIndex(number);
                         break;
                     case 3:
                         System.out.print("Введіть індекс: ");
                         int index = scanner.nextInt();
-                        luke.findByIndex(index);
+                        lucas.findByIndex(index);
                         break;
                     default:
                         System.out.print("Такого варіанту немає!");
