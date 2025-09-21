@@ -1,7 +1,13 @@
 package org.lucassequence;
 import java.util.Scanner;
 
+/**
+ * Головний клас програми, що розташований в Main.java
+ */
 public class Main {
+    /**
+     * Головна функція програми
+     */
     public static void main(String[] args) {
         try {
             System.out.println("Лаборнаторна робота №1. Основи Java\n" +

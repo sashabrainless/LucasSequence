@@ -1,16 +1,33 @@
 package org.lucassequence;
 
+/**
+ * Класс ряду Люка, що розташований в LucasSequenceClass.java
+ */
 public class LucasSequenceClass {
+    /**
+     * Масив чисел
+     */
     long[] lucasnumbers;
 
-    LucasSequenceClass () { //варіант порожнього конструктора
+    /**
+     * Варіант порожнього конструктора
+     */
+    LucasSequenceClass () {
     }
 
-    LucasSequenceClass (int n) { //варіант конструктора з параметрами
+    /**
+     * Варіант конструктора з параметрами
+     * @param n кількість чисел в ряду Люка
+     */
+    LucasSequenceClass (int n) {
         initNumbers(n);
     }
 
-    void initNumbers(int count) { //ініціалізація ряду Люка
+    /**
+     * Ініціалізація ряду Люка
+     * @param count кількість чисел в ряду Люка
+     */
+    void initNumbers(int count) {
         lucasnumbers = new long [count];
         lucasnumbers[0] = 2;
         lucasnumbers[1] = 1;
@@ -18,13 +35,20 @@ public class LucasSequenceClass {
             lucasnumbers[i] = lucasnumbers[i-2] + lucasnumbers[i-1];
         }
     }
-    void printNumbers() { //вивід чисел
+
+    /**
+     * Вивід чисел ряду Люка
+     */
+    void printNumbers() {
         for (int i = 0; i < lucasnumbers.length; i++) {
             System.out.println("lucas[" + i + "] = " + lucasnumbers[i]);
         }
     }
 
-    void squaredNumbersPlusOne() { //перевірка чисел на відповідність формулі (w^2)+1
+    /**
+     * Перевірка чисел на відповідність формулі (w^2)+1
+     */
+    void squaredNumbersPlusOne() {
         for (int i = 0; i < lucasnumbers.length; i++) {
             double w = Math.sqrt(lucasnumbers[i] - 1);
             if (w - Math.floor(w) == 0) {
@@ -33,7 +57,11 @@ public class LucasSequenceClass {
         }
     }
 
-    void reutrnIndex(long num) { //додаткова функція знаходження індексу числа
+    /**
+     * Додаткова функція для знаходження індексу числа
+     * @param num число, для якого буде здійснено пошук індексу
+     */
+    void reutrnIndex(long num) {
         boolean isfound = false;
         for (int i = 0; i < lucasnumbers.length; i++) {
             if (lucasnumbers[i] == num) {
@@ -47,7 +75,11 @@ public class LucasSequenceClass {
         }
     }
 
-    void findByIndex(int index) { //додаткова функція знаходження числа за індексом
+    /**
+     * Додаткова функція для знаходження числа за індексом
+     * @param index індекс, за яким буде здійснено пошук числа
+     */
+    void findByIndex(int index) {
         if (!(index >= lucasnumbers.length) && !(index < 0)) {
             System.out.println("lucas[" + index + "] = " + lucasnumbers[index]);
         }
