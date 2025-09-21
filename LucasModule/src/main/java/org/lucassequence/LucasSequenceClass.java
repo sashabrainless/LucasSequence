@@ -1,7 +1,7 @@
 package org.lucassequence;
 
 /**
- * Класс ряду Люка, що розташований в LucasSequenceClass.java
+ * Клас ряду Люка, що розташований в LucasSequenceClass.java
  * <p>Виконує такі функції:
  *  <ul>
  *  <li>Ініціалізація ряду Люка;</li>

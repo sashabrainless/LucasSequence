@@ -22,7 +22,7 @@ public class Main {
 
             Scanner scanner = new Scanner(System.in);
 
-            System.out.print("Введіть кількість N чисел в ряду Люка: ");
+            System.out.print("Введіть кількість чисел в ряді Люка: ");
             int n = scanner.nextInt();
 
             if (n <= 90 && n >= 1) {
@@ -56,10 +56,10 @@ public class Main {
                 }
             }
             else if (n > 90) {
-                System.out.println("Максимальне значення N = 90, так як максимальне значення long змінної = 9,223,372,036,854,775,807");
+                System.out.println("Максимальна довжина ряду = 90, так як максимальне значення long змінної = 9,223,372,036,854,775,807");
             }
             else {
-                System.out.println("Мінімальне значення N = 1");
+                System.out.println("Мінімальна довжина ряду = 1");
             }
         } catch (Exception ex) {
             throw new RuntimeException(ex);
